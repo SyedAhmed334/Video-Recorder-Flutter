@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "839701778239",
+    "project_id": "video-recorder-4022a",
+    "storage_bucket": "video-recorder-4022a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:839701778239:android:0223f1b76fda65ce61cd8a",
+        "android_client_info": {
+          "package_name": "com.example.video_recorder"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCqrwerQcucO-oxqJj-7jOTxJQpTlypIHc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
