@@ -4,6 +4,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:video_recorder/Features/Video/screens/video_screen.dart';
+import 'package:video_recorder/Features/Video/screens/videos_list_screen.dart';
 import 'package:video_recorder/utils/helpers/helper_functions.dart';
 
 class OTPController extends GetxController {
@@ -23,7 +24,7 @@ class OTPController extends GetxController {
           .then((value) {
         isLoading.value = false;
         XHelperFunctions.showToastMessage(message: 'Login Successful');
-        Get.offAll(() => const VideoScreen());
+        Get.offAll(() => const VideoListScreen());
       });
     } catch (e) {
       isLoading.value = false;

@@ -2,8 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
-import 'package:video_recorder/Features/Video/screens/video_screen.dart';
-import 'package:video_recorder/Features/Video/screens/videos_list_screen.dart';
+import 'package:video_recorder/Features/Splash/splash_screen.dart';
 import 'package:video_recorder/firebase_options.dart';
 import 'package:video_recorder/utils/themes/theme.dart';
 
@@ -25,7 +24,7 @@ class MyApp extends StatelessWidget {
       title: 'Video Recorder',
       debugShowCheckedModeBanner: false,
       theme: XTheme.lightTheme,
-      home: const VideoScreen(),
+      home: const SplashScreen(),
     );
   }
 }

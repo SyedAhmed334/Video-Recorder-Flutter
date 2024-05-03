@@ -3,13 +3,13 @@ class Video {
   final String description;
   final String category;
   final String location;
-  final String downloadUrl;
+  final String videoUrl;
 
   Video({
     required this.title,
     required this.description,
     required this.category,
     required this.location,
-    required this.downloadUrl,
+    required this.videoUrl,
   });
 }

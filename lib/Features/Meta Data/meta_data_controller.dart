@@ -99,8 +99,7 @@ class MetaDataController extends GetxController {
     await placemarkFromCoordinates(position.latitude, position.longitude)
         .then((List<Placemark> placemarks) {
       Placemark place = placemarks[0];
-      currentAddress =
-          '${place.subLocality}, ${place.locality}, ${place.country}';
+      currentAddress = '${place.locality}, ${place.country}';
       videoLocationController.text = currentAddress;
       update();
     }).catchError((e) {

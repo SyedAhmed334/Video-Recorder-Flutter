@@ -34,9 +34,8 @@ class PhoneAuthController extends GetxController {
         },
         codeAutoRetrievalTimeout: (String verificationId) {
           isLoading.value = false;
-          XHelperFunctions.showToastMessage(message: 'Request Timeout!');
+          // XHelperFunctions.showToastMessage(message: 'Request Timeout!');
         },
-        timeout: const Duration(seconds: 20),
         phoneNumber: phoneNumberController.text.toString(),
       );
     } catch (e) {
