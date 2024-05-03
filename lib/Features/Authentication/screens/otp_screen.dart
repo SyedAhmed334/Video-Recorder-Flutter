@@ -88,16 +88,18 @@ class _OTPScreenState extends State<OTPScreen> {
                 const SizedBox(
                   height: 60,
                 ),
-                CustomButton(
-                  onTap: () async {
-                    controller.focusNode.unfocus();
-                    if (formKey.currentState!.validate()) {
-                      log(widget.verificationId);
-                      await controller.verifyOtp(widget.verificationId);
-                    }
-                  },
-                  containLoading: controller.isLoading.value,
-                  btnText: 'Verify',
+                Obx(
+                  () => CustomButton(
+                    onTap: () async {
+                      controller.focusNode.unfocus();
+                      if (formKey.currentState!.validate()) {
+                        log(widget.verificationId);
+                        await controller.verifyOtp(widget.verificationId);
+                      }
+                    },
+                    containLoading: controller.isLoading.value,
+                    btnText: 'Verify',
+                  ),
                 ),
                 const SizedBox(
                   height: 5,

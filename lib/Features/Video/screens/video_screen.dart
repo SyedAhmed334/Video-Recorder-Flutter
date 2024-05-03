@@ -29,6 +29,7 @@ class _VideoScreenState extends State<VideoScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: XColors.blackBackgroundColor,
+      appBar: AppBar(),
       body: GetBuilder<VideoController>(
         builder: (controller) {
           return Obx(() {

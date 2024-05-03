@@ -26,6 +26,12 @@ class _VideoListScreenState extends State<VideoListScreen> {
       appBar: AppBar(
         title: const Text('My Videos'),
         centerTitle: true,
+        leading: IconButton(
+          onPressed: () {
+            Get.to(() => const VideoListScreen());
+          },
+          icon: const Icon(Icons.arrow_back),
+        ),
         actions: [
           IconButton(
               onPressed: () {

@@ -6,12 +6,12 @@ class VideoController extends GetxController {
   RxBool isLoading = true.obs;
   late CameraController cameraController;
   RxBool isRecording = false.obs;
-  Rx<CameraLensDirection> cameraDirection = CameraLensDirection.front.obs;
+  Rx<CameraLensDirection> cameraDirection = CameraLensDirection.back.obs;
   initCamera() async {
     final cameras = await availableCameras();
-    final front = cameras
+    final direction = cameras
         .firstWhere((camera) => camera.lensDirection == cameraDirection.value);
-    cameraController = CameraController(front, ResolutionPreset.max);
+    cameraController = CameraController(direction, ResolutionPreset.max);
     await cameraController.initialize();
     isLoading.value = false;
     update();
@@ -21,7 +21,7 @@ class VideoController extends GetxController {
     if (isRecording.value) {
       final file = await cameraController.stopVideoRecording();
       isRecording.value = false;
-      // final route = MaterialPageRoute(
+      // final route = MaterialPageRoute(s
       //   fullscreenDialog: true,
       //   builder: (_) => VideoRecordingScreen(filePath: file.path),
       // );
